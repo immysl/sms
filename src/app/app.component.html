@@ -1,3 +1,8 @@
 <h1>
   {{title}}
 </h1>
+
+<form>
+  <button kendoButton *ngIf="!(af.auth | async)" (click)="login()" [primary]="true">Login</button>
+  <p *ngIf="af.auth | async">You are logged in</p>
+</form>
