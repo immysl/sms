@@ -2,37 +2,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
+import { AuthModule } from './auth/auth.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { LayoutModule } from './layout/layout.module';
+import { StudentModule } from './student/student.module';
+import { SubjectModule } from './subject/subject.module';
+import { TeacherModule } from './teacher/teacher.module';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentComponent } from './student/student.component';
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyBcvQC2VNgy0uI-uN_hB9w_KifSxCPPIG8',
-  authDomain: 'student-management-syste-9f8b3.firebaseapp.com',
-  databaseURL: 'https://student-management-syste-9f8b3.firebaseio.com',
-  projectId: 'student-management-syste-9f8b3',
-  storageBucket: 'student-management-syste-9f8b3.appspot.com',
-  messagingSenderId: '737353149236'
-};
-
-const authConfig = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
-};
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StudentComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig, authConfig),
-    ButtonsModule
+    LayoutModule,
+    AuthModule,
+    DashboardModule,
+    StudentModule,
+    SubjectModule,
+    TeacherModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
