@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   logout(): void {
-    this.auth.logout().then(() => this.router.navigate(['/login']));
+    this.auth.logout().then(() => this.redirectState(false));
   }
 
   checkLogin(): Observable<boolean> {
