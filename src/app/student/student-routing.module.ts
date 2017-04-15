@@ -9,7 +9,7 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
 
 const studentRoutes: Routes = [
   {
-    path: 'student',
+    path: '',
     component: StudentComponent,
     canActivate: [AuthGuardService],
     children: [

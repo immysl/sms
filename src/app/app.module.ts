@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { LayoutModule } from './layout/layout.module';
-import { StudentModule } from './student/student.module';
 import { SubjectModule } from './subject/subject.module';
 import { TeacherModule } from './teacher/teacher.module';
 
@@ -24,7 +23,6 @@ import { AppComponent } from './app.component';
     LayoutModule,
     AuthModule,
     DashboardModule,
-    StudentModule,
     SubjectModule,
     TeacherModule,
     AppRoutingModule
