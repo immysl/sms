@@ -1,5 +1,8 @@
-<p>
-  student-list works!
-</p>
+<kendo-grid [data]="students | async">
+  <kendo-grid-column field="firstName" title="First Name"></kendo-grid-column>
+  <kendo-grid-column field="lastName" title="Last Name"></kendo-grid-column>
+  <kendo-grid-column field="age" title="Age"></kendo-grid-column>
+  <kendo-grid-column field="grade" title="Grade"></kendo-grid-column>
+</kendo-grid>
 
 <router-outlet name="popup"></router-outlet>

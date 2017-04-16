@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GridModule } from '@progress/kendo-angular-grid';
 
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentComponent } from './student.component';
@@ -9,6 +10,7 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
 @NgModule({
   imports: [
     CommonModule,
+    GridModule,
     StudentRoutingModule
   ],
   declarations: [
