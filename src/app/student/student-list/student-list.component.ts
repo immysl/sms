@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-student-list',
@@ -7,7 +8,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2';
   styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit {
-  students: FirebaseListObservable<any[]>;
+  students: FirebaseListObservable<Student[]>;
 
   constructor(private db: AngularFireDatabase) { }
 
